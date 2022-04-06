@@ -1,0 +1,14 @@
+{
+  "name": "shopping_list",
+  "version": "1.0.0",
+  "description": "a simple crud shopping desktop application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "cheran kumar",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^18.0.2"
+  }
+}
