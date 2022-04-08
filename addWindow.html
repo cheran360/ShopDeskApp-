@@ -8,13 +8,17 @@
     />
   </head>
   <body>
-    <form>
-      <div>
-        <label>Enter Item</label>
-        <input type="text" id="item" autofocus />
-      </div>
-      <button type="submit">add Item</button>
-    </form>
+    <div class="container">
+      <form>
+        <div>
+          <label>Enter Item</label>
+          <input type="text" id="item" autofocus />
+        </div>
+        <button class="btn waves-effect waves-light" type="submit">
+          add Item
+        </button>
+      </form>
+    </div>
 
     <script>
       const { ipcRenderer } = require("electron");

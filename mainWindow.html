@@ -8,7 +8,11 @@
     />
   </head>
   <body>
-    <h1>Shopping list</h1>
+    <nav>
+      <div class="nav-wrapper">
+        <a class="brand-logo center">ShoppingList</a>
+      </div>
+    </nav>
     <ul></ul>
 
     <script>
@@ -18,7 +22,9 @@
 
       // Catch Add Item
       ipcRenderer.on("item:add", function (e, item) {
+        ul.className = "collection";
         const li = document.createElement("li");
+        li.className = "collection-item";
         const itemText = document.createTextNode(item);
         li.appendChild(itemText);
         ul.appendChild(li);
@@ -27,6 +33,7 @@
       // Clear Items
       ipcRenderer.on("item:clear", function () {
         ul.innerHTML = "";
+        ul.className = "";
       });
 
       // Remove Items
@@ -34,6 +41,9 @@
 
       function removeItem(e) {
         e.target.remove();
+        if (ul.children.length == 0) {
+          ul.className = "";
+        }
       }
     </script>
   </body>
